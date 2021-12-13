@@ -1,1 +1,5 @@
+title: GFD Viewer
+description: A viewer for Game Font Data (GFD) of MT Framework.
+language: ko
+owner_name: Lee Minseo (Quiple)
 theme: jekyll-theme-modernist
