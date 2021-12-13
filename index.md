@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./style.css">
+
 <input type="file" id="importFile" accept=".gfd">
 
 <input type="button" id="submit" class="button" value="분석">
