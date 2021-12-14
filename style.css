@@ -13,3 +13,19 @@ header { height: 0; overflow: hidden; }
 .markdown-body code { font-weight: 500; font-family: 'SF Mono',Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
 .markdown-body dl dt { margin: 0; float: left; width: 25%; font-style: normal; }
 .markdown-body dl dd { margin: 0; }
+button, .button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 400;
+  line-height: 1.17648;
+  border: none;
+  border-radius: 8px;
+  background: #0071e3;
+  color: #fff;
+}
+button:hover, .button:hover { background: #0077ed; }
