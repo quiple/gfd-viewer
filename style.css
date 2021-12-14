@@ -11,5 +11,5 @@ header { height: 0; overflow: hidden; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
 #gfdContent code {
   display: inline-block; width: 25px; margin: 0 3px 0 -3px; text-align: center; font-weight: 500;
-  font-family: SFMono-Regular,Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Pretendard Variable',monospace;
+  font-family: 'SF Mono',Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Pretendard Variable',monospace;
 }
