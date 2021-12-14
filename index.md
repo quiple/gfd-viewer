@@ -11,7 +11,7 @@ A viewer for Game Font Data (GFD) of MT Framework.
 
 <input type="file" id="importFile" accept=".gfd">
 
-<input type="button" id="submit" class="button" value="분석">
+<input type="button" id="submit" class="button" value="Parse">
 
 <dl id="gfdHeader">
   <dt>Version</dt><dd id="version"></dd>
