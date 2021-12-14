@@ -21,8 +21,8 @@ button, .button {
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
-  font-weight: 400;
-  line-height: 1.17648;
+  font-weight: 400 !important;
+  line-height: 1.17648 !important;
   border: none;
   border-radius: 8px;
   background: #0071e3;
