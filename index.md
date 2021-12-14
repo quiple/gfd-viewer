@@ -5,6 +5,10 @@ title: GFD Viewer
 
 <link rel="stylesheet" href="./style.css">
 
+# GFD Viewer
+
+A viewer for Game Font Data (GFD) of MT Framework.
+
 <input type="file" id="importFile" accept=".gfd">
 
 <input type="button" id="submit" class="button" value="분석">
