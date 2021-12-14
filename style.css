@@ -3,5 +3,5 @@ html, .markdown-body { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD
 header { height: 0; overflow: hidden; }
 #gfdHeader, #gfdContent { display: none; }
 #gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: 0; }
-#gfdContent th span { display: block; background: #fff; margin: 6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
+#gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
