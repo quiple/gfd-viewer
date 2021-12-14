@@ -2,5 +2,6 @@
 html, .markdown-body { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif; font-feature-settings: 'palt'; }
 header { height: 0; overflow: hidden; }
 #gfdHeader, #gfdContent { display: none; }
-#gfdContent th { text-align: left; white-space: nowrap; }
+#gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: 0; }
+#gfdContent th span { background: #fff; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
