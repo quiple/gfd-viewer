@@ -30,7 +30,7 @@ A viewer for Game Font Data (GFD) of MT Framework.
   <thead>
     <tr>
       <th><span>Code point</span></th>
-      <th><span>Tex ID</span></th>
+      <th><span>Page</span></th>
       <th><span>Position</span></th>
       <th><span>Size</span></th>
       <th><span>Advance</span></th>
