@@ -78,7 +78,7 @@ onmessage = function (buffer) {
           advn1 = parseInt('0x' + adv.substr(3, 1) + adv.substr(0, 2)),
           advn2 = ', ' + parseInt('0x' + adv.substr(4, 2) + adv.substr(2, 1)),
           offs1 = char.getInt8(16),
-          offs2 = char.getInt8(17);
+          offs2 = ', ' + char.getInt8(17);
 
     } else if (version == 69639 || version == 69895) {
 
