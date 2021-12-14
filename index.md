@@ -1,3 +1,8 @@
+---
+layout: page
+title: GFD Viewer
+---
+
 <link rel="stylesheet" href="./style.css">
 
 <input type="file" id="importFile" accept=".gfd">
