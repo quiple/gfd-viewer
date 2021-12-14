@@ -10,4 +10,4 @@ header { height: 0; overflow: hidden; }
 #gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
 #gfdContent code { display: inline-block; width: 25px; margin: 0 3px 0 -3px; text-align: center; }
-code { font-weight: 500; font-family: 'SF Mono',Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
+.markdown-body code { font-weight: 500; font-family: 'SF Mono',Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
