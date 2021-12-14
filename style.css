@@ -1,8 +1,15 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
-html, .markdown-body { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif; font-feature-settings: 'palt'; }
+html, .markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
+  font-feature-settings: 'palt';
+}
 header { height: 0; overflow: hidden; }
 #gfdHeader, #gfdContent { display: none; }
 #gfdContent { border: 3px solid #dfe2e5; }
 #gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: -2px; }
 #gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
+#gfdContent code {
+  display: inline-block; width: 25px; margin: 0 3px 0 -3px; text-align: center; font-weight: 500;
+  font-family: SFMono-Regular,Cascadia,'IBM Plex Mono','Roboto Mono',Consolas,Liberation Mono,Menlo,Courier,'Hiragino Sans','Hiragino Kaku Gothic','Pretendard Variable',monospace;
+}
