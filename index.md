@@ -29,13 +29,13 @@ A viewer for Game Font Data (GFD) of MT Framework.
 <table id="gfdContent">
   <thead>
     <tr>
-      <th>Code point</th>
-      <th>Tex ID</th>
-      <th>Position</th>
-      <th>Size</th>
-      <th>Advance</th>
-      <th>Offset</th>
-      <th>Symbol?</th>
+      <th><span>Code point</span></th>
+      <th><span>Tex ID</span></th>
+      <th><span>Position</span></th>
+      <th><span>Size</span></th>
+      <th><span>Advance</span></th>
+      <th><span>Offset</span></th>
+      <th><span>Symbol?</span></th>
     </tr>
   </thead>
   <tbody>
