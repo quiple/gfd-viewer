@@ -17,7 +17,7 @@ button, .button {
   display: block;
   width: 100%;
   padding: 8px 16px;
-  font-size: 17px;
+  font-size: 17px !important;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -29,3 +29,4 @@ button, .button {
   color: #fff;
 }
 button:hover, .button:hover { background: #0077ed; }
+button:active, .button:active { background: #006edb; }
