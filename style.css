@@ -4,6 +4,7 @@ html, .markdown-body {
   font-feature-settings: 'palt';
 }
 header { height: 0; overflow: hidden; }
+.markdown-body a { color: #06c; }
 #gfdHeader, #gfdContent { display: none; }
 #gfdContent { border: 3px solid #dfe2e5; }
 #gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: -2px; }
