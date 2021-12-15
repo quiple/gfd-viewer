@@ -22,7 +22,7 @@ button, .button {
 button:hover, .button:hover { background: #0077ed; }
 button:active, .button:active { background: #006edb; }
 .markdown-body a { color: #06c; }
-.markdown-body code { font-weight: 500; font-family: 'SF Mono','Cascadia Code','IBM Plex Mono','Roboto Mono',Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
+.markdown-body code { font-weight: 500; font-family: 'SF Mono','Cascadia Mono','Cascadia Code','IBM Plex Mono','Roboto Mono',Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
 
 #gfdHeader, #gfdContent { display: none; }
 #gfdContent { border: 3px solid #dfe2e5; }
