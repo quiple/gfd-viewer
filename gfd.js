@@ -103,5 +103,75 @@ document.getElementById('submit').addEventListener('click', event => {
     }
 
   });
+
   reader.readAsArrayBuffer(file);
+
+});
+
+document.getElementById('importImg').addEventListener('click', event => {
+
+  const img = document.getElementById('importImgFile');
+
+  if (img.files.length <= 0) {
+    alert('The file is not selected.');
+    return false;
+  }
+
+  const version = document.getElementById('version').innerHTML;
+  const gfdRow = document.getElementById('gfdContent').tBodies[0].rows;
+  const fileImg = img.files[0];
+  const readerImg = new FileReader();
+  const inputImg = new Image();
+
+  readerImg.addEventListener('load', event => {
+
+    inputImg.src = event.target.result;
+    let sx = [], sy = [], sWidth = [], sHeight = [], dx = [], dy = [], dWidth = [], dHeight = [];
+
+    if (version == 68614) {
+
+      for (let i = 0; i < gfdRow.length; i++) {
+        sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
+        sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
+        sWidth[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[0]);
+        sHeight[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[1]);
+        dx[i] = parseInt(gfdRow[i].childNodes[5].innerHTML.split(', ')[0]);
+        dy[i] = parseInt(gfdRow[i].childNodes[5].innerHTML.split(', ')[1]);
+        dWidth[i] = parseInt(gfdRow[i].childNodes[4].innerHTML.split(', ')[0]);
+        dHeight[i] = parseInt(gfdRow[i].childNodes[4].innerHTML.split(', ')[1]);
+        if (document.getElementsByTagName('canvas')[i] !== undefined) {
+          document.getElementsByTagName('canvas')[i].remove();
+        }
+        gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas></canvas>');
+        document.getElementsByTagName('canvas')[i].width = dWidth[i];
+        document.getElementsByTagName('canvas')[i].height = dHeight[i];
+        document.getElementsByTagName('canvas')[i].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],dx[i],dy[i],dWidth[i],dHeight[i]);
+      }
+
+    } else if (version == 69382 || version == 69639 || version == 69895) {
+
+      for (let i = 0; i < gfdRow.length; i++) {
+        sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
+        sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
+        sWidth[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[0]);
+        sHeight[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[1]);
+        dx[i] = parseInt(gfdRow[i].childNodes[5].innerHTML.split(', ')[0]);
+        dy[i] = parseInt(gfdRow[i].childNodes[5].innerHTML.split(', ')[1]);
+        dWidth[i] = parseInt(gfdRow[i].childNodes[4].innerHTML.split(', ')[0]);
+        dHeight[i] = parseInt(gfdRow[i].childNodes[4].innerHTML.split(', ')[1]);
+        if (document.getElementsByTagName('canvas')[i] !== undefined) {
+          document.getElementsByTagName('canvas')[i].remove();
+        }
+        gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas></canvas>');
+        document.getElementsByTagName('canvas')[i].width = sWidth[i];
+        document.getElementsByTagName('canvas')[i].height = sHeight[i];
+        document.getElementsByTagName('canvas')[i].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],0,0,sWidth[i],sHeight[i]);
+      }
+      
+    }
+
+  });
+
+  readerImg.readAsDataURL(fileImg);
+
 });

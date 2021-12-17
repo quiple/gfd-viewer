@@ -108,5 +108,7 @@ onmessage = function (buffer) {
     glphs += glph;
 
   }
+
   postMessage(glphs);
+  
 }
