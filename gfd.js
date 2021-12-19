@@ -119,33 +119,39 @@ document.getElementById('importImg').addEventListener('click', event => {
     return false;
   }
 
-  const version = document.getElementById('version').innerHTML;
+  const fileName = document.getElementById('fileName').getElementsByTagName('code')[0].innerHTML;
   const gfdRow = document.getElementById('gfdContent').tBodies[0].rows;
-  const fileImg = img.files[0];
-  const readerImg = new FileReader();
   const inputImg = new Image();
+  let sx = [], sy = [], sWidth = [], sHeight = [];
 
-  readerImg.addEventListener('load', event => {
+  for (let j = 0; j < img.files.length; j++) {
 
-    inputImg.src = event.target.result;
-    let sx = [], sy = [], sWidth = [], sHeight = [];
+    let readerImg = new FileReader();
+    readerImg.addEventListener('load', event => {
 
-    for (let i = 0; i < gfdRow.length; i++) {
-      sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
-      sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
-      sWidth[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[0]);
-      sHeight[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[1]);
-      if (document.getElementsByTagName('canvas')[i] !== undefined) {
-        document.getElementsByTagName('canvas')[i].remove();
+      inputImg.src = event.target.result;
+
+      for (let i = 0; i < gfdRow.length; i++) {
+        let page = gfdRow[i].childNodes[1].innerHTML;
+        if (img.files[j].name.startsWith(fileName.split('\\')[fileName.split('\\').length-1]+'_'+page)) {
+          sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
+          sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
+          sWidth[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[0]);
+          sHeight[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[1]);
+          if (gfdRow[i].firstChild.getElementsByTagName('canvas')[0] !== undefined) {
+            gfdRow[i].firstChild.getElementsByTagName('canvas')[0].remove();
+          }
+          gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas></canvas>');
+          gfdRow[i].firstChild.getElementsByTagName('canvas')[0].width = sWidth[i];
+          gfdRow[i].firstChild.getElementsByTagName('canvas')[0].height = sHeight[i];
+          gfdRow[i].firstChild.getElementsByTagName('canvas')[0].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],0,0,sWidth[i],sHeight[i]);
+        }
       }
-      gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas></canvas>');
-      document.getElementsByTagName('canvas')[i].width = sWidth[i];
-      document.getElementsByTagName('canvas')[i].height = sHeight[i];
-      document.getElementsByTagName('canvas')[i].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],0,0,sWidth[i],sHeight[i]);
-    }
 
-  });
+    });
 
-  readerImg.readAsDataURL(fileImg);
+    readerImg.readAsDataURL(img.files[j]);
+
+  }
 
 });

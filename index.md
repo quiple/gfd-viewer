@@ -26,7 +26,7 @@ A viewer for Game Font Data (GFD) of MT Framework.
   <dt>File Name</dt><dd id="fileName"></dd>
 </dl>
 
-<input type="file" id="importImgFile" accept=".png">
+<input type="file" id="importImgFile" accept=".png" multiple>
 
 <input type="button" id="importImg" class="button" value="Import Font Image">
 
