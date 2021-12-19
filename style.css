@@ -29,7 +29,7 @@ button:active, .button:active { background: #006edb; }
 #gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: -2px; }
 #gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
 #gfdContent td { font-size: 14px; }
-#gfdContent td canvas { background: #000; }
+#gfdContent td canvas { background: #000; vertical-align: middle; margin: 0 9px 0 -3px; }
 #gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
 #gfdContent code { display: inline-block; width: 25px; margin: 0 3px 0 -3px; text-align: center; }
 .markdown-body dl dt { margin: 0; float: left; width: 25%; font-style: normal; }
