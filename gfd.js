@@ -26,6 +26,8 @@ document.getElementById('submit').addEventListener('click', event => {
   document.querySelector('#gfdContent tbody').innerHTML = '';
   document.getElementById('gfdHeader').style.display = 'block';
   document.getElementById('gfdContent').style.display = 'table';
+  document.getElementById('importImgFile').style.display = 'block';
+  document.getElementById('importImg').style.display = 'block';
   const elem = document.getElementById('importFile');
 
   if (elem.files.length <= 0) {
@@ -110,8 +112,6 @@ document.getElementById('submit').addEventListener('click', event => {
 
 document.getElementById('importImg').addEventListener('click', event => {
 
-  document.getElementById('importImgFile').style.display = 'block';
-  document.getElementById('importImg').style.display = 'block';
   const img = document.getElementById('importImgFile');
 
   if (img.files.length <= 0) {
