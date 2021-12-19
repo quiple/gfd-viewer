@@ -9,3 +9,6 @@ A viewer for Game Font Data (GFD) of MT Framework.
 - Phoenix Wright: Ace Attorney - Spirit of Justice (Mobile version)
 - Mega Man 11
 - The Great Ace Attorney Chronicles
+
+----
+MT Framework is a trademark of Capcom.
