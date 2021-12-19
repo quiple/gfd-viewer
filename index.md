@@ -9,6 +9,8 @@ title: GFD Viewer
 
 A viewer for Game Font Data (GFD) of MT Framework.
 
+<a class="github-button" href="https://github.com/quiple/gfd-viewer" data-size="large" aria-label="View quiple/gfd-viewer on GitHub">View on GitHub</a>
+
 <input type="file" id="importFile" accept=".gfd">
 
 <input type="button" id="submit" class="button" value="Parse">
@@ -47,3 +49,4 @@ A viewer for Game Font Data (GFD) of MT Framework.
 </table>
 
 <script src="./gfd.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
