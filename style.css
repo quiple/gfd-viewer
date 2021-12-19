@@ -24,7 +24,7 @@ button:active, .button:active { background: #006edb; }
 .markdown-body a { color: #06c; }
 .markdown-body code { font-weight: 500; font-family: 'SF Mono','Cascadia Mono','Cascadia Code','IBM Plex Mono','Roboto Mono',Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
 
-#gfdHeader, #gfdContent { display: none; }
+#gfdHeader, #gfdContent, #importImgFile, #importImg { display: none; }
 #gfdContent { border: 3px solid #dfe2e5; }
 #gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: -2px; }
 #gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }

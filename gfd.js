@@ -110,6 +110,8 @@ document.getElementById('submit').addEventListener('click', event => {
 
 document.getElementById('importImg').addEventListener('click', event => {
 
+  document.getElementById('importImgFile').style.display = 'block';
+  document.getElementById('importImg').style.display = 'block';
   const img = document.getElementById('importImgFile');
 
   if (img.files.length <= 0) {

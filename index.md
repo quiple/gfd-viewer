@@ -24,11 +24,11 @@ A viewer for Game Font Data (GFD) of MT Framework.
   <dt>BaseLine</dt><dd id="baseLine"></dd>
   <dt>DescentLine</dt><dd id="descentLine"></dd>
   <dt>File Name</dt><dd id="fileName"></dd>
-  
-  <input type="file" id="importImgFile" accept=".png">
-
-  <input type="button" id="importImg" class="button" value="Import Font Image">
 </dl>
+
+<input type="file" id="importImgFile" accept=".png">
+
+<input type="button" id="importImg" class="button" value="Import Font Image">
 
 <table id="gfdContent">
   <thead>
