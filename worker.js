@@ -32,7 +32,7 @@ onmessage = function (buffer) {
 
   for (var i = 0; i < charCount; i++) {
 
-    if (version == 68614) {
+    if (version == 68101 || version == 68614) {
 
       var char = new DataView(buffer.data.slice((49 + floatCount * 4 + fileNameLength) + 16 * i, (49 + floatCount * 4 + fileNameLength) + 16 * i + 16)),
           code = char.getUint32(0, true),
