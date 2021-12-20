@@ -14,7 +14,7 @@ onmessage = function (buffer) {
   const view = new DataView(buffer.data);
   const version = view.getUint32(4, true);
 
-  if (version == 68614) {
+  if (version == 68101 || version == 68614) {
 
     var charCount = view.getUint32(28, true),
         floatCount = view.getUint32(32, true),
