@@ -52,7 +52,7 @@ document.getElementById('submit').addEventListener('click', event => {
 
     const version = view.getUint32(4, true);
 
-    if (version != 68614 && version != 69382 && version != 69639 && version != 69895) {
+    if (version !== 68101 && version !== 68614 && version !== 69382 && version !== 69639 && version !== 69895) {
       alert('Unsupported version of GFD.');
       return false;
     }
