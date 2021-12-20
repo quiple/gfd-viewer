@@ -57,7 +57,7 @@ document.getElementById('submit').addEventListener('click', event => {
       return false;
     }
 
-    if (version == 68614) {
+    if (version == 68101 || version == 68614) {
 
       var fontSize = view.getUint32(20, true),
           fontTexCount = view.getUint32(24, true),
