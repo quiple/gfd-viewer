@@ -1,8 +1,8 @@
 page_title: GFD Viewer
-description: A viewer for Game Font Data (GFD) of MT Framework
+description: A viewer for Game Font Data (GFD) of MT Framework.
 enable_smart_app_banner: false
-url: https://quiple.github.io
-baseurl: /gfd-viewer
+url: https://gfd.quiple.dev
+baseurl: /
 your_name: Lee Minseo (Quiple)
 email_address: itoupluk427@gmail.com
 twitter_username: kuipuru
