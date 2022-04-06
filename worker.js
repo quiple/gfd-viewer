@@ -30,7 +30,7 @@ onmessage = function (buffer) {
 
   }
 
-  for (var i = 0; i < charCount; i++) {
+  for (let i = 0; i < charCount; i++) {
 
     if (version == 68101 || version == 68614) {
 
