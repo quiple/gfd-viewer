@@ -6,3 +6,4 @@
 #gfdHeader, #gfdContent, #importImgCont, #importImgHead { display: none; }
 #gfdContent td, dd { font-variant-numeric: tabular-nums; font-feature-settings: 'ss06'; }
 #gfdContent code { padding: .2em .4em; font-size: 85%; border-radius: 6px; }
+#fileName { font-feature-settings: 'ss06'; }
