@@ -7,3 +7,4 @@
 #gfdContent td, dd { font-variant-numeric: tabular-nums; font-feature-settings: 'ss06'; }
 #gfdContent code { padding: .2em .4em; font-size: 85%; border-radius: 6px; }
 #gfdHeader span { font-feature-settings: 'ss06'; }
+input { min-width: 0; }
