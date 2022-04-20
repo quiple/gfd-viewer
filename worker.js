@@ -104,7 +104,7 @@ onmessage = function (buffer) {
 
     }
 
-    let glph = '<tr><td><code>' + type + '</code> U+' + unicode + '</td><td>' + teId + '</td><td>' + posi1 + posi2 + '</td><td>' + size1 + size2 + '</td><td>' + advn1 + advn2 + '</td><td>' + offs1 + offs2 + '</td><td>' + spac + '</td></tr>';
+    let glph = '<tr><td class="TableObject-item"><code lang="ja" class="color-bg-subtle">' + type + '</code> U+' + unicode + '</td><td class="TableObject-item">' + teId + '</td><td class="TableObject-item">' + posi1 + posi2 + '</td><td class="TableObject-item">' + size1 + size2 + '</td><td class="TableObject-item">' + advn1 + advn2 + '</td><td class="TableObject-item">' + offs1 + offs2 + '</td><td class="TableObject-item">' + spac + '</td></tr>';
     glphs += glph;
 
   }

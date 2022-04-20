@@ -26,8 +26,8 @@ document.getElementById('submit').addEventListener('click', event => {
   document.querySelector('#gfdContent tbody').innerHTML = '';
   document.getElementById('gfdHeader').style.display = 'block';
   document.getElementById('gfdContent').style.display = 'table';
-  document.getElementById('importImgFile').style.display = 'block';
-  document.getElementById('importImg').style.display = 'block';
+  document.getElementById('importImgHead').style.display = 'block';
+  document.getElementById('importImgCont').style.display = 'flex';
   const elem = document.getElementById('importFile');
 
   if (elem.files.length <= 0) {
@@ -141,7 +141,7 @@ document.getElementById('importImg').addEventListener('click', event => {
           if (gfdRow[i].firstChild.getElementsByTagName('canvas')[0] !== undefined) {
             gfdRow[i].firstChild.getElementsByTagName('canvas')[0].remove();
           }
-          gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas></canvas>');
+          gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas class="p-1 my-1 mr-1 rounded-2 color-bg-emphasis v-align-middle"></canvas>');
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].width = sWidth[i];
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].height = sHeight[i];
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],0,0,sWidth[i],sHeight[i]);

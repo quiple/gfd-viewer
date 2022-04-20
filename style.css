@@ -1,36 +1,8 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
-html, .markdown-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard Variable', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
-  font-feature-settings: 'palt';
-}
-header { height: 0; overflow: hidden; }
-button, .button {
-  display: block;
-  width: 100%;
-  padding: 8px 16px;
-  font-size: 17px !important;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  font-weight: 400 !important;
-  line-height: 1.17648 !important;
-  border: none;
-  border-radius: 8px;
-  background: #0071e3;
-  color: #fff;
-}
-button:hover, .button:hover { background: #0077ed; }
-button:active, .button:active { background: #006edb; }
-.markdown-body a { color: #06c; }
-.markdown-body code { font-weight: 500; font-family: 'SF Mono','Cascadia Mono','Cascadia Code','IBM Plex Mono','Roboto Mono',Menlo,Courier,'Hiragino Sans','Source Han Sans JP','Noto Sans JP',Meiryo,'Pretendard Variable',monospace; }
-
-#gfdHeader, #gfdContent, #importImgFile, #importImg { display: none; }
-#gfdContent { border: 3px solid #dfe2e5; }
-#gfdContent th { text-align: left; white-space: nowrap; position: sticky; top: -2px; }
-#gfdContent th span { display: block; background: #fff; margin: -6px -13px; padding: 6px 13px; border-bottom: 2px solid #dfe2e5; }
-#gfdContent td { font-size: 14px; }
-#gfdContent td canvas { background: #000; vertical-align: middle; margin: 0 9px 0 -3px; }
-#gfdContent td, dd { font-feature-settings: 'ss06'; font-variant-numeric: tabular-nums; }
-#gfdContent code { display: inline-block; width: 25px; margin: 0 3px 0 -3px; text-align: center; }
-.markdown-body dl dt { margin: 0; float: left; width: 25%; font-style: normal; }
-.markdown-body dl dd { margin: 0; }
+.container { margin-left: auto; margin-right: auto; padding: 24px; width: 100%; max-width: 720px; }
+@media screen and (min-width: 544px) { .container { padding: 32px; } }
+@media screen and (min-width: 768px) { .container { padding: 40px; } }
+@media screen and (min-width: 1012px) { .container { padding: 48px; } }
+* { font-family: -apple-system, BlinkMacSystemFont, Pretendard, Pretendard Variable, Inter, Helvetica Neue, Helvetica, Arial, Hiragino Sans, Hiragino Kaku Gothic ProN, AXIS Std, IBM Plex Sans JP, Source Han Sans JP, Noto Sans JP, Source Han Sans KR, Noto Sans KR, Meiryo, Yu Gothic, MS UI Gothic, MS PGothic, sans-serif; }
+#gfdHeader, #gfdContent, #importImgCont, #importImgHead { display: none; }
+#gfdContent td, dd { font-variant-numeric: tabular-nums; font-feature-settings: 'ss06'; }
+#gfdContent code { padding: .2em .4em; font-size: 85%; border-radius: 6px; }
