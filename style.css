@@ -1,3 +1,4 @@
+@import url('https://unpkg.com/pretendard@1.3.0/dist/web/static/pretendard.css');
 .container { margin-left: auto; margin-right: auto; padding: 24px; width: 100%; max-width: 720px; }
 @media screen and (min-width: 544px) { .container { padding: 32px; } }
 @media screen and (min-width: 768px) { .container { padding: 40px; } }
