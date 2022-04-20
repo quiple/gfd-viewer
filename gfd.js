@@ -70,7 +70,7 @@ document.getElementById('submit').addEventListener('click', event => {
           fileNameLength = view.getUint32(44 + floatCount * 4, true),
           fileName = view.getString(48 + floatCount * 4, fileNameLength),
           items = ['version', 'fontSize', 'fontTexCount', 'charCount', 'floatCount', 'maxCharWidth', 'maxCharHeight', 'baseLine', 'descentLine', 'fileName'],
-          vars = [version, fontSize, fontTexCount, charCount, floatCount, maxCharWidth, maxCharHeight, baseLine, descentLine, '<code>' + fileName + '</code>'];
+          vars = [version, fontSize, fontTexCount, charCount, floatCount, maxCharWidth, maxCharHeight, baseLine, descentLine, fileName];
 
     } else if (version == 69382 || version == 69639 || version == 69895) {
 
@@ -85,7 +85,7 @@ document.getElementById('submit').addEventListener('click', event => {
           fileNameLength = view.getUint32(56 + floatCount * 4, true),
           fileName = view.getString(60 + floatCount * 4, fileNameLength),
           items = ['version', 'fontSize', 'fontTexCount', 'charCount', 'floatCount', 'maxCharWidth', 'maxCharHeight', 'baseLine', 'descentLine', 'fileName'],
-          vars = [version, fontSize, fontTexCount, charCount, floatCount, maxCharWidth, maxCharHeight, baseLine, descentLine, '<code>' + fileName + '</code>'];
+          vars = [version, fontSize, fontTexCount, charCount, floatCount, maxCharWidth, maxCharHeight, baseLine, descentLine, fileName];
 
     }
 
