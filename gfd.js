@@ -26,7 +26,7 @@ document.getElementById('submit').addEventListener('click', event => {
   const elem = document.getElementById('importFile');
 
   if (elem.files.length <= 0) {
-    alert('No file selected.');
+    alert("No file selected.");
     return false;
   }
 
@@ -47,18 +47,23 @@ document.getElementById('submit').addEventListener('click', event => {
     const magic = view.getString(0, 4);
 
     if (!magic.startsWith('GFD')) {
-      alert('Please select a GFD file.');
+      alert("Please select a GFD file.");
       return false;
     }
 
     const version = view.getUint32(4, true);
 
-    if (version !== 68101 && version !== 68614 && version !== 69382 && version !== 69639 && version !== 69895) {
-      alert('Unsupported version of GFD.');
+    if (version !== 68101
+     && version !== 68614
+     && version !== 69382
+     && version !== 69639
+     && version !== 69895) {
+      alert("Unsupported GFD version.");
       return false;
     }
 
-    if (version == 68101 || version == 68614) {
+    if (version == 68101
+     || version == 68614) {
 
       var fontSize = view.getUint32(20, true),
           fontTexCount = view.getUint32(24, true),
@@ -73,7 +78,9 @@ document.getElementById('submit').addEventListener('click', event => {
           items = ['version', 'fontSize', 'fontTexCount', 'charCount', 'floatCount', 'maxCharWidth', 'maxCharHeight', 'baseLine', 'descentLine', 'fileName'],
           vars = [version, fontSize, fontTexCount, charCount, floatCount, maxCharWidth, maxCharHeight, baseLine, descentLine, fileName];
 
-    } else if (version == 69382 || version == 69639 || version == 69895) {
+    } else if (version == 69382
+            || version == 69639
+            || version == 69895) {
 
       var fontSize = view.getUint32(20, true),
           fontTexCount = view.getUint32(24, true),
@@ -101,7 +108,7 @@ document.getElementById('submit').addEventListener('click', event => {
         document.querySelector('#gfdContent tbody').innerHTML = glphs.data;
       }
     } else {
-      alert('Your browser does not support Web Workers.');
+      alert("Your browser does not support Web Workers.");
       return false;
     }
 
@@ -116,7 +123,7 @@ document.getElementById('importImg').addEventListener('click', event => {
   const img = document.getElementById('importImgFile');
 
   if (img.files.length <= 0) {
-    alert('No file selected.');
+    alert("No file selected.");
     return false;
   }
 
@@ -133,19 +140,30 @@ document.getElementById('importImg').addEventListener('click', event => {
       inputImg.src = event.target.result;
 
       for (let i = 0; i < gfdRow.length; i++) {
+
         let page = gfdRow[i].childNodes[1].innerHTML;
+
         if (img.files[j].name.startsWith(fileName.split('\\')[fileName.split('\\').length-1]+'_'+page)) {
+
           sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
           sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
           sWidth[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[0]);
           sHeight[i] = parseInt(gfdRow[i].childNodes[3].innerHTML.split(', ')[1]);
+
           if (gfdRow[i].firstChild.getElementsByTagName('canvas')[0] !== undefined) {
             gfdRow[i].firstChild.getElementsByTagName('canvas')[0].remove();
           }
-          gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas class="p-1 my-1 mr-1 rounded-2 color-bg-emphasis v-align-middle"></canvas>');
+
+          gfdRow[i].firstChild.insertAdjacentHTML('afterbegin', '<canvas class="color-bg-emphasis"></canvas>');
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].width = sWidth[i];
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].height = sHeight[i];
           gfdRow[i].firstChild.getElementsByTagName('canvas')[0].getContext('2d').drawImage(inputImg,sx[i],sy[i],sWidth[i],sHeight[i],0,0,sWidth[i],sHeight[i]);
+
+        } else {
+
+          alert("The image file name must start with the font file name.");
+          return false;
+
         }
       }
 

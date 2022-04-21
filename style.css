@@ -8,4 +8,8 @@
 #gfdContent td, dd { font-variant-numeric: tabular-nums; font-feature-settings: 'ss06'; }
 #gfdContent code { padding: .2em .4em; font-size: 85%; border-radius: 6px; }
 #gfdHeader span { font-feature-settings: 'ss06'; }
+th.TableObject-item { text-align: left; position: sticky; top: 0; }
+th.TableObject-item div,
+td.TableObject-item { padding: 2px 4px; }
+td.TableObject-item canvas { padding: 4px; margin-right: 4px; border-radius: 6px; vertical-align: middle; }
 input { min-width: 0; }
