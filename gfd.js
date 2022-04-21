@@ -26,7 +26,7 @@ document.getElementById('submit').addEventListener('click', event => {
   const elem = document.getElementById('importFile');
 
   if (elem.files.length <= 0) {
-    alert('The file is not selected.');
+    alert('No file selected.');
     return false;
   }
 
@@ -116,7 +116,7 @@ document.getElementById('importImg').addEventListener('click', event => {
   const img = document.getElementById('importImgFile');
 
   if (img.files.length <= 0) {
-    alert('The file is not selected.');
+    alert('No file selected.');
     return false;
   }
 
