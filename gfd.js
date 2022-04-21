@@ -23,17 +23,17 @@ DataView.prototype.getHex = function (offset, length) {
 
 document.getElementById('submit').addEventListener('click', event => {
 
+  if (elem.files.length <= 0) {
+    alert('The file is not selected.');
+    return false;
+  }
+
   document.querySelector('#gfdContent tbody').innerHTML = '';
   document.getElementById('gfdHeader').style.display = 'block';
   document.getElementById('gfdContent').style.display = 'table';
   document.getElementById('importImgHead').style.display = 'block';
   document.getElementById('importImgCont').style.display = 'flex';
   const elem = document.getElementById('importFile');
-
-  if (elem.files.length <= 0) {
-    alert('The file is not selected.');
-    return false;
-  }
 
   const file = elem.files[0];
   const reader = new FileReader();
@@ -112,14 +112,13 @@ document.getElementById('submit').addEventListener('click', event => {
 
 document.getElementById('importImg').addEventListener('click', event => {
 
-  const img = document.getElementById('importImgFile');
-
   if (img.files.length <= 0) {
     alert('The file is not selected.');
     return false;
   }
 
-  const fileName = document.getElementById('fileName').getElementsByTagName('code')[0].innerHTML;
+  const img = document.getElementById('importImgFile');
+  const fileName = document.getElementById('fileName').innerHTML;
   const gfdRow = document.getElementById('gfdContent').tBodies[0].rows;
   const inputImg = new Image();
   let sx = [], sy = [], sWidth = [], sHeight = [];
