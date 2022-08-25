@@ -143,7 +143,7 @@ document.getElementById('importImg').addEventListener('click', event => {
 
         let page = gfdRow[i].childNodes[1].innerHTML;
 
-        if (img.files[j].name.startsWith(fileName.split('\\')[fileName.split('\\').length-1]+'_'+page)) {
+        if (img.files[j].name.startsWith(fileName.split('\\')[fileName.split('\\').length-1]+'_'+page+'_')) {
 
           sx[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[0]);
           sy[i] = parseInt(gfdRow[i].childNodes[2].innerHTML.split(', ')[1]);
